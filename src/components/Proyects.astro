@@ -1,0 +1,53 @@
+---
+import Proyect from "./Proyect.astro";
+---
+
+<div id="proyects">
+  <h1 class="text-center mb-28 text-5xl text-bg font-bold">Proyects</h1>
+  <ul role="list" class="flex flex-wrap justify-around gap-4">
+    <Proyect
+      title="Links Shortener"
+      body="Link shortener with autentication sistem using JWT. Frontend created with react.js, node.js for Backend and MySql as Database  "
+      img="./Shortener.png"
+      git="https://github.com/villarroelsaad/Acortador_links"
+      page="https://acortador-links-front.vercel.app/"
+    />
+    <Proyect
+      title="Weather App"
+      body="Weather App using react and an external api to extract the data, contains a shearch bar an basic information about the climate "
+      img="./Weather_app.png"
+      git="https://github.com/villarroelsaad/weather_App"
+      page="https://todo-app-ts-eta.vercel.app/"
+    />
+    <Proyect
+      title="To-do App"
+      body="Created using react.js and TypeScript allows you to create tasks which are stored locally and allows modification, deletion and marking for completed tasks."
+      img="./Todo.png"
+      git="https://github.com/villarroelsaad/Todo-App-TS"
+      page="https://todo-app-ts-eta.vercel.app/"
+    />
+    <Proyect
+      title="Gallery App"
+      body="Developed with React, TypeScript and using infinite scroll, it allows searching for images, viewing them and downloading them"
+      img="./Gallery.png"
+      git=""
+      page=""
+    />
+  </ul>
+</div>
+
+<style>
+  ul {
+    max-width: calc(100% - 2rem);
+    margin: auto;
+    width: 1200px;
+  }
+  h1 {
+    text-shadow:
+      2px 2px 1px #67e8f9 ,
+      -2px 2px 1px #67e8f9 ,
+      -2px -2px 0 #67e8f9 ,
+      2px -2px 0 #67e8f9 ;
+    letter-spacing: 2px;
+  }
+</style>

@@ -1,0 +1,33 @@
+---
+interface Props {
+  title: string;
+  body: string;
+  img: string;
+  git: string;
+  page: string;
+}
+
+const { img, title, body, git, page } = Astro.props;
+---
+
+<section class="flex transition-all text-gray-200 min-w-32 max-w-md border border-gray-800  rounded-lg mb-10 bg-pro flex-col hover:border-cyan-400">
+  <div>
+    <img class="w-full h-60 mb-6 p-1 rounded-t-lg" src={img} alt="" />
+    <h3 class="pl-4 text-cyan-200 font-semibold">
+      {title}
+    </h3>
+    <p class="pl-4 pr-3 text-gray-400 font-semibold text-base mb-6 -tracking-tighter">
+      {body}
+    </p>
+    <div class="flex w-full gap-5 justify-center p-2">
+      <a
+        class="w-28 text-lg flex transition-all gap-3 p-1 mb-3 justify-center items-center border border-cyan-400 border-opacity-60 rounded-3xl font-semibold hover:opacity-70"
+        href={git}><img class="w-5" src="./github.svg" alt="github" />Github</a
+      >
+      <a
+        class="w-20 text-lg transition-all flex gap-3 p-1 mb-3 justify-center items-center border border-cyan-400 border-opacity-95 rounded-3xl font-semibold hover:translate-x-1 hover:opacity-70"
+        href={page}><img class="w-7" src="../go.svg" alt="visit" /></a
+      >
+    </div>
+  </div>
+</section>

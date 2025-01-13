@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import About from "../components/About.astro";
+import Proyects from "../components/Proyects.astro";
+import Tecnologies from "../components/Tecnologies.astro";
+import Footer from "../components/footer.astro";
+---
+
+<Layout title="Portfolio">
+  <main class="animate-slideRigth">
+    <Header />
+    <About />
+    <Tecnologies />
+    <Proyects />
+  </main> 
+   <Footer/>
+</Layout>
+
+<style>
+  main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+    font-family: sans-serif;
+  }
+  .slide-Rigth{animation:slide-left 0.4s linear both}@keyframes slide-Rigth{0%{transform:translateX(-40px)}100%{transform:translateX(15px)}}
+  </style>

@@ -4,11 +4,11 @@ export default {
 	theme: {
 		extend: {
 			backgroundColor: {
-				pro: "#0f1115",
-				a: "#13151a"
+				pro: "#0c0e12",
+				a: "#0f1115"
 			},
 			colors: {
-				bg:"#0f1115"
+				bg: "#0c0e12"
 			},
 				keyframes: {
 				  blur: {

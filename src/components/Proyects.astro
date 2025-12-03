@@ -4,34 +4,54 @@ import Proyect from "./Proyect.astro";
 
 <div id="proyects">
   <h1 class="text-center mb-28 text-5xl text-bg font-bold">Proyects</h1>
-  <ul role="list" class="flex flex-wrap justify-around gap-4">
+  <ul role="list" class="flex flex-wrap justify-around gap-10">
+    <Proyect
+      title="IA Chatbot"
+      body="Demo project providing a Python (Flask) backend encapsulated in Docker container and a React + Vite frontend to interact with a chatbot. The backend attempts to use Google GenAI (Gemini) via google.genai if available and an API key is configured. Otherwise it includes a simple fallback bot for local testing."
+      img="./Chat.png"
+      git="https://github.com/villarroelsaad/IA-chat"
+      page="https://ia-chat-front.vercel.app/"
+      techs={["react.svg", "typescript.svg", "python.svg", "docker.svg"]}
+    />
+    <Proyect
+      title="Sells Paypal IPN System"
+      body="Sales management system with PayPal IPN integration, built with React for the frontend, Node.js for the backend, and MySQL as the database to manage clients and sales. It includes user authentication with roles (admin and user) and a Control Panel to make publications."
+      img="./Sistem.png"
+      git="https://github.com/villarroelsaad/web/tree/main"
+      page="https://web-ten-pi-26.vercel.app/"
+      techs={["react.svg", "typescript.svg", "tailwind.svg", "mysql.svg"]}
+    />
     <Proyect
       title="Links Shortener"
-      body="Link shortener with autentication sistem using JWT. Frontend created with react.js, node.js for Backend and MySql as Database  "
+      body="Link shortener with autentication system using JWT. Frontend created with react.js, node.js for Backend and MySql as Database "
       img="./Shortener.png"
       git="https://github.com/villarroelsaad/Acortador_links"
       page="https://acortador-links-front.vercel.app/"
+      techs={["react.svg", "node-js.svg", "mysql.svg", "tailwind.svg"]}
     />
     <Proyect
       title="Weather App"
       body="Weather App using react and an external api to extract the data, contains a shearch bar an basic information about the climate "
       img="./Weather_app.png"
       git="https://github.com/villarroelsaad/weather_App"
-      page="https://todo-app-ts-eta.vercel.app/"
+      page="https://weather-peach-three.vercel.app/"
+      techs={["react.svg", "js.svg", "tailwind.svg"]}
     />
     <Proyect
       title="To-do App"
       body="Created using react.js and TypeScript allows you to create tasks which are stored locally and allows modification, deletion and marking for completed tasks."
       img="./Todo.png"
       git="https://github.com/villarroelsaad/Todo-App-TS"
-      page="https://weather-peach-three.vercel.app/"
+      page="https://todo-app-ts-eta.vercel.app/"
+      techs={["react.svg", "typescript.svg"]}
     />
     <Proyect
       title="Gallery App"
-      body="Developed with React, TypeScript and using infinite scroll, it allows searching for images, viewing them and downloading them"
+      body="Developed with React,TypeScript and using infinite scroll, it allows searching for images, viewing them and downloading them"
       img="./Gallery.png"
       git="https://gallery-coral-ten.vercel.app/"
       page="https://gallery-coral-ten.vercel.app/"
+      techs={["react.svg", "typescript.svg", "tailwind.svg"]}
     />
   </ul>
 </div>

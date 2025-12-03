@@ -5,28 +5,48 @@ interface Props {
   img: string;
   git: string;
   page: string;
+  techs?: string[];
 }
 
-const { img, title, body, git, page } = Astro.props;
+import TechBadge from "./TechBadge.astro";
+const { img, title, body, git, page, techs = [] } = Astro.props;
 ---
 
-<section class="flex transition-all text-gray-200 min-w-32 max-w-md border border-gray-800  rounded-lg mb-10 bg-pro flex-col hover:border-cyan-400">
+<section
+  class="flex transition-all text-gray-200 min-w-52 max-w-xl border-2 p-1 border-gray-800 rounded-lg mb-10 bg-pro flex-col hover:border-cyan-400"
+>
   <div>
     <img class="w-full h-60 mb-6 p-1 rounded-t-lg" src={img} alt="" />
     <h3 class="pl-4 text-cyan-200 font-semibold">
       {title}
     </h3>
-    <p class="pl-4 pr-3 text-gray-400 font-semibold text-base mb-6 -tracking-tighter">
+    <p
+      class="pl-4 pr-3 text-gray-400 font-semibold text-base mb-3 -tracking-tighter"
+    >
       {body}
     </p>
+    <div class="pl-4 pr-3 mb-4">
+      <div class="flex gap-2 flex-wrap items-center">
+        {
+          techs.map((t: string) => (
+            <TechBadge
+              src={t.startsWith("/") ? t : `/${t}`}
+              alt={t.replace(/\.(svg|png|jpg|jpeg)$/i, "")}
+              title={t.replace(/\.(svg|png|jpg|jpeg)$/i, "")}
+              showName={true}
+            />
+          ))
+        }
+      </div>
+    </div>
     <div class="flex w-full gap-5 justify-center p-2">
       <a
-        class="w-28 text-lg flex transition-all gap-3 p-1 mb-3 justify-center items-center border border-cyan-400 border-opacity-60 rounded-3xl font-semibold hover:opacity-70"
-        href={git}><img class="w-5" src="./github.svg" alt="github" />Github</a
+        class="w-32 text-lg flex transition-all gap-3 p-1 mb-3 justify-center items-center border-2 border-gray-600 border-opacity-60 rounded-3xl hover:scale-105 hover:border-cyan-400 font-semibold"
+        href={git}><img class="w-6" src="./github.svg" alt="github" />Github</a
       >
       <a
-        class="w-20 text-lg transition-all flex gap-3 p-1 mb-3 justify-center items-center border border-cyan-400 border-opacity-95 rounded-3xl font-semibold hover:translate-x-1 hover:opacity-70"
-        href={page}><img class="w-7" src="../go.svg" alt="visit" /></a
+        class="w-16 text-lg flex transition-all gap-3 p-2 mb-3 justify-center items-center border-2 border-gray-600 border-opacity-60 rounded-3xl hover:scale-105 hover:border-cyan-400 font-semibold"
+        href={page}><img class="w-6" src="../go.svg" alt="visit" /></a
       >
     </div>
   </div>

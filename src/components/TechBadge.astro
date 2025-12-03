@@ -1,0 +1,25 @@
+---
+interface Props {
+  src: string;
+  alt?: string;
+  title?: string;
+  showName?: boolean;
+}
+
+const { src, alt = "tech", title, showName = true } = Astro.props as Props;
+const _name = (title ?? alt ?? "").replace(/\.(svg|png|jpg|jpeg)$/i, "").replace(/-/g, " ");
+const displayTitle = _name
+  .split(/\s+/)
+  .filter(Boolean)
+  .map((s) => s.charAt(0).toUpperCase() + s.slice(1))
+  .join(" ");
+---
+
+<div class="inline-flex items-center gap-2 px-3 py-1 p-1 rounded-full bg-a border border-gray-600 hover:border-cyan-400 shadow-sm hover:scale-105 transition-transform" title={title ?? alt} aria-label={title ?? alt}>
+  {showName ? (
+    <span class="text-sm text-gray-300 font-semibold select-none ">{displayTitle}</span>
+  ) : null}
+  <img class="p-0.5 w-7 h-7 object-contain" src={src} alt={alt} />
+</div>
+
+

@@ -1,9 +1,15 @@
-<article id="about" transition:animate="fade" class="w-full bg-a -rotate-1 p-2">
+---
+import { Image } from "astro:assets";
+import p from "../../public/p.png";
+---
+
+<article id="about" transition:animate="fade" class="w-full bg-a p-2">
   <h1 class="text-bg text-center mt-20 font-bold text-5xl mb-20">About me</h1>
-  <section class="flex flex-wrap gap-20 mb-16  justify-center items-center">
+  <section class="flex flex-wrap gap-20 mb-16 justify-center items-center">
     <div class="min-w-96 max-w-2xl">
       <p
-        class="text-gray-400 overflow-hidden text-lg tracking-wide font-semibold">
+        class="text-gray-400 overflow-hidden text-lg tracking-wide font-semibold"
+      >
         Hello,<strong class="text-cyan-300"> i`m Jose Villarroel</strong> a person
         who always seeks to learn new ways solve problems I like music and of course
         programming, always seek to improve and <strong class="text-cyan-300"
@@ -12,27 +18,29 @@
       </p>
       <br />
       <p class="text-gray-400 text-lg tracking-wide font-semibold">
-        I<strong class="text-cyan-300"> studied computer science </strong> at a
-        technical institute, learning the basics of programming, continued my studies
-        self-taught and I am currently studying a degree in 
-        <strong class="text-cyan-300">
-          Computer Engineering</strong>.
+        I<strong class="text-cyan-300"> studied computer science </strong> at a technical
+        institute, learning the basics of programming, continued my studies self-taught
+        and I am currently studying a degree in
+        <strong class="text-cyan-300"> Computer Engineering</strong>.
       </p>
     </div>
-    <div >
-      <img class="w-80 shadow-sm shadow-cyan-400 rounded-full" src="./p.png" alt="" />
+    <div>
+      <Image
+        class="w-80 shadow-sm shadow-cyan-400 rounded-full"
+        src={p}
+        alt=""
+      />
     </div>
   </section>
-
 </article>
 
 <style>
   h1 {
     text-shadow:
-      2px 2px 1px #67e8f9 ,
-      -2px 2px 1px #67e8f9 ,
-      -2px -2px 0 #67e8f9 ,
-      2px -2px 0 #67e8f9 ;
+      2px 2px 1px #67e8f9,
+      -2px 2px 1px #67e8f9,
+      -2px -2px 0 #67e8f9,
+      2px -2px 0 #67e8f9;
     letter-spacing: 2px;
   }
 </style>
